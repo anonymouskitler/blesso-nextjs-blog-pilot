@@ -85,12 +85,10 @@ If something is off, you now know the problem is in production rather than in yo
 
 ## The short version
 
-| Stage | What it means | What to check |
-| --- | --- | --- |
-| PR open | Proposed, not public | Files changed are only the article's |
-| Preview | Rendered, not public | Content, links, images, mobile |
-| Merged | Accepted on the production branch | Merged commit equals the one you reviewed |
-| Deployed | Built and served | Deployment succeeded |
-| Live | Readers can see it | Public URL, listing, feeds |
+1. **PR open: proposed, not public.** Check that the files changed are only the article's.
+2. **Preview: rendered, not public.** Check content, links, images, and mobile width. If the preview failed, stop here.
+3. **Merged: accepted on the production branch.** Check that the merged commit is the one you reviewed.
+4. **Deployed: built and served.** Check that the production deployment succeeded.
+5. **Live: readers can see it.** Check the public URL, the blog listing, and any feeds.
 
-Treat each row as its own checkpoint. Reaching one does not mean you have reached the next, and the habit of checking each is what keeps an unreviewed change from becoming a published one.
+Treat each step as its own checkpoint. Reaching one does not mean you have reached the next, and the habit of checking each is what keeps an unreviewed change from becoming a published one.
