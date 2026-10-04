@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="t d">
+  <title id="t">Fixed recorded questions compared with adaptive follow-ups</title>
+  <desc id="d">Top lane: Question 1, Question 2 and Question 3 in a fixed sequence, then a recording. Bottom lane: Question 1, an answer, a follow-up based on the answer, then scored evidence with timestamps for a human reviewer.</desc>
+  <rect width="800" height="340" fill="#f8fafc"/>
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#0f172a">
+    <text x="30" y="36" font-size="16" font-weight="700">One-way: fixed recorded questions</text>
+    <g fill="#e2e8f0" stroke="#64748b" stroke-width="1.5">
+      <rect x="30" y="52" width="140" height="56" rx="8"/>
+      <rect x="220" y="52" width="140" height="56" rx="8"/>
+      <rect x="410" y="52" width="140" height="56" rx="8"/>
+      <rect x="600" y="52" width="170" height="56" rx="8"/>
+    </g>
+    <text x="100" y="86" text-anchor="middle">Question 1</text>
+    <text x="290" y="86" text-anchor="middle">Question 2</text>
+    <text x="480" y="86" text-anchor="middle">Question 3</text>
+    <text x="685" y="86" text-anchor="middle">Recording to review</text>
+    <g stroke="#64748b" stroke-width="2" fill="none">
+      <path d="M170 80h50M360 80h50M550 80h50"/>
+    </g>
+    <text x="30" y="150" font-size="16" font-weight="700">Conversational: follow-ups adapt to answers</text>
+    <g fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5">
+      <rect x="30" y="166" width="140" height="56" rx="8"/>
+      <rect x="220" y="166" width="140" height="56" rx="8"/>
+      <rect x="410" y="166" width="140" height="56" rx="8"/>
+      <rect x="600" y="166" width="170" height="56" rx="8"/>
+    </g>
+    <text x="100" y="200" text-anchor="middle">Question 1</text>
+    <text x="290" y="200" text-anchor="middle">Candidate answer</text>
+    <text x="480" y="200" text-anchor="middle">Follow-up</text>
+    <text x="685" y="200" text-anchor="middle">Timestamped evidence</text>
+    <g stroke="#1d4ed8" stroke-width="2" fill="none">
+      <path d="M170 194h50M360 194h50M550 194h50"/>
+      <path d="M480 166v-24h-190v24" stroke-dasharray="5 4"/>
+    </g>
+    <text x="30" y="290" font-size="15">In both lanes, a person reviews the evidence and makes the hiring decision.</text>
+    <text x="30" y="314" font-size="13" fill="#475569">Illustrative workflow, not a performance comparison.</text>
+  </g>
+</svg>
