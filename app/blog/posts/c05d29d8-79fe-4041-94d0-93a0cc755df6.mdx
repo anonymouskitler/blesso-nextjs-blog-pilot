@@ -10,20 +10,22 @@ Those are four different moments, and most mistakes happen in the gaps between t
 
 <Image
   src="/images/c05d29d8-79fe-4041-94d0-93a0cc755df6/pr-to-production.svg"
-  alt="Four boxes joined by arrows, left to right: Preview, Review, Merge, Production. Preview and Review are labelled not public, Merge is labelled accepted, and only Production is labelled published."
+  alt="Four boxes joined by arrows, left to right: Preview, Review, Merge, Production. Preview and Review are labelled not production, Merge is labelled accepted, and only Production is labelled published."
   width={800}
   height={220}
 />
 
 ## 1. The pull request is a proposal
 
-When an article reaches your repository as a pull request, nothing public has changed. The PR holds a branch with the new post file, and any images, next to the current production branch. Production still serves what it served yesterday.
+When an article reaches your repository as a pull request, the production site has not changed. The PR holds a branch with the new post file, and any images, next to the current production branch. Production still serves what it served yesterday.
 
 That is the point. The PR is where you decide, with the proposed change visible and the live site untouched.
 
 In a repository where posts are files in a folder, the diff is usually short: one new file and possibly a few images. Read the file list first. If you see changes to the site shell, dependency files, or other articles, stop and ask why before reading any prose.
 
 ## 2. Review the preview, not just the diff
+
+A preview is a deployment of the PR branch at its own address, separate from the production site. Depending on how your hosting is configured, that address may be open to anyone with the link or protected behind a login. Either way, it is not production, so approving a preview does not publish anything.
 
 A diff shows text. It does not show how the page renders. Open the preview deployment for the PR and read the article the way a visitor would.
 
@@ -62,7 +64,7 @@ So a merged PR means the change is accepted, and a finished deployment means the
 
 Sometimes the preview build fails: the page errors out, an image is missing, or the deployment never finishes. It is tempting to read that as "the article is in, it just needs a fix". It is not in anything.
 
-A preview is a private copy built from the PR branch. Whether it succeeds or fails, production is unchanged and readers see nothing. A failed preview means the proposed change cannot be served yet, so there is nothing to approve.
+A preview is a separate copy built from the PR branch. Depending on your hosting configuration, it may be publicly reachable or protected behind a login, but it is never the production site. Whether it succeeds or fails, production is unchanged and readers of the production site see nothing new. A failed preview means the proposed change cannot be served yet, so there is nothing to approve.
 
 What to do instead:
 
@@ -85,8 +87,8 @@ If something is off, you now know the problem is in production rather than in yo
 
 ## The short version
 
-1. **PR open: proposed, not public.** Check that the files changed are only the article's.
-2. **Preview: rendered, not public.** Check content, links, images, and mobile width. If the preview failed, stop here.
+1. **PR open: proposed, not production.** Check that the files changed are only the article's.
+2. **Preview: rendered, separate from production.** Check content, links, images, and mobile width. If the preview failed, stop here.
 3. **Merged: accepted on the production branch.** Check that the merged commit is the one you reviewed.
 4. **Deployed: built and served.** Check that the production deployment succeeded.
 5. **Live: readers can see it.** Check the public URL, the blog listing, and any feeds.
