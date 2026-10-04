@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220" role="img" aria-labelledby="t d">
+  <title id="t">Preview, Review, Merge, Production</title>
+  <desc id="d">Four boxes in a row joined by arrows: Preview, Review, Merge, Production. Only the last box, Production, is where an article is published.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="800" height="220" rx="12" fill="#f8fafc"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <g fill="#e2e8f0" stroke="#475569" stroke-width="2">
+      <rect x="24" y="60" width="150" height="80" rx="8"/>
+      <rect x="226" y="60" width="150" height="80" rx="8"/>
+      <rect x="428" y="60" width="150" height="80" rx="8"/>
+    </g>
+    <rect x="630" y="60" width="150" height="80" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+    <g fill="#0f172a" font-size="20" font-weight="600">
+      <text x="99" y="107">Preview</text>
+      <text x="301" y="107">Review</text>
+      <text x="503" y="107">Merge</text>
+      <text x="705" y="107">Production</text>
+    </g>
+    <g fill="#334155" font-size="13">
+      <text x="99" y="170">not public</text>
+      <text x="301" y="170">not public</text>
+      <text x="503" y="170">accepted</text>
+      <text x="705" y="170" font-weight="600">published</text>
+    </g>
+    <g stroke="#475569" stroke-width="2" marker-end="url(#a)">
+      <line x1="176" y1="100" x2="222" y2="100"/>
+      <line x1="378" y1="100" x2="424" y2="100"/>
+      <line x1="580" y1="100" x2="626" y2="100"/>
+    </g>
+  </g>
+</svg>
