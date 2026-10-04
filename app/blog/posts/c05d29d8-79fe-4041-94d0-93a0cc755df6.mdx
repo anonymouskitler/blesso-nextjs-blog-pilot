@@ -1,0 +1,75 @@
+---
+title: 'How a Pull Request Becomes a Published Article'
+publishedAt: '2026-10-04'
+summary: 'A practical guide to reviewing a preview, merging the exact version you approved, and checking production afterwards.'
+---
+
+An article is not published when it is written. It is not published when the pull request opens, or even when the build goes green. It is published when the version you approved is on the production branch and a reader can load it from the live site.
+
+Those are four different moments, and most mistakes happen in the gaps between them. This guide walks through each one.
+
+## 1. The pull request is a proposal
+
+When an article reaches your repository as a pull request, nothing public has changed. The PR holds a branch with the new post file, and any images, next to the current production branch. Production still serves what it served yesterday.
+
+That is the point. The PR is where you decide, with the proposed change visible and the live site untouched.
+
+In a repository where posts are files in a folder, the diff is usually short: one new file and possibly a few images. Read the file list first. If you see changes to the site shell, dependency files, or other articles, stop and ask why before reading any prose.
+
+## 2. Review the preview, not just the diff
+
+A diff shows text. It does not show how the page renders. Open the preview deployment for the PR and read the article the way a visitor would.
+
+A short checklist:
+
+- **Title and summary.** These feed the listing page and search results. Do they say what the article delivers?
+- **Headings.** Skim only the headings. Does the argument make sense from those alone?
+- **Facts and claims.** Check each specific number, name, and promise against what you know to be true. A preview cannot tell you a claim is wrong.
+- **Images.** Confirm they load, have sensible alt text, and are not oversized.
+- **Links.** Click them. A broken link looks the same in a diff as a working one.
+- **Mobile width.** Narrow the window. Code blocks and tables are the usual offenders.
+
+If something is wrong, request the change on the PR. Do not fix it directly on production.
+
+## 3. Merge the exact version you reviewed
+
+Here is the subtle part. A PR is a moving target: new commits can be added after you looked at it. If the branch changes between your review and your merge, you may publish something you never read.
+
+Before you merge, confirm that the latest commit on the PR is the one the preview you reviewed was built from. Most hosts show the commit hash next to the preview. Compare it with the head of the PR.
+
+Practical habits that help:
+
+1. Note the head commit when you finish reviewing.
+2. If new commits arrive, review again. A one-line change can still be a changed claim.
+3. Merge only when the head matches what you approved.
+
+When the platform you use offers a publish action that merges for you, the same rule applies: the version you approve should be the version that goes out. If it reports that the branch has moved or conflicts with production, treat that as a prompt to review again, not an obstacle to bypass.
+
+## 4. Wait for production to finish building
+
+Merging puts the change on the production branch. It does not instantly put it in front of readers. Most setups then run a production build and deploy, which takes some time and can fail.
+
+So a merged PR means the change is accepted, and a finished deployment means the site can serve it. Check your host's deployment status for the merge commit before you assume anything is live.
+
+## 5. Check production
+
+The last step is the one people skip. Open the real site, not the preview, and verify:
+
+- The article loads at its public URL.
+- It appears on the blog listing page.
+- The title, summary, and images match what you reviewed.
+- If your site has a sitemap or RSS feed, the new post appears there too.
+
+If something is off, you now know the problem is in production rather than in your review, and you can fix it with a new PR.
+
+## The short version
+
+| Stage | What it means | What to check |
+| --- | --- | --- |
+| PR open | Proposed, not public | Files changed are only the article's |
+| Preview | Rendered, not public | Content, links, images, mobile |
+| Merged | Accepted on the production branch | Merged commit equals the one you reviewed |
+| Deployed | Built and served | Deployment succeeded |
+| Live | Readers can see it | Public URL, listing, feeds |
+
+Treat each row as its own checkpoint. Reaching one does not mean you have reached the next, and the habit of checking each is what keeps an unreviewed change from becoming a published one.
