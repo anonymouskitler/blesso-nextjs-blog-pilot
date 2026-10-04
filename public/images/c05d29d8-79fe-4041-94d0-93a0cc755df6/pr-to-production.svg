@@ -21,8 +21,8 @@
       <text x="705" y="107">Production</text>
     </g>
     <g fill="#334155" font-size="13">
-      <text x="99" y="170">not public</text>
-      <text x="301" y="170">not public</text>
+      <text x="99" y="170">not production</text>
+      <text x="301" y="170">not production</text>
       <text x="503" y="170">accepted</text>
       <text x="705" y="170" font-weight="600">published</text>
     </g>
