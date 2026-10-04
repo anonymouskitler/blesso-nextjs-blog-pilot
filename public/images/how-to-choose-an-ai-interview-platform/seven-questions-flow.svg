@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Where the seven questions apply</title>
+  <desc id="d">Four stages in a row: set up the role (questions 1 and 7), run the interview (questions 2 and 3), review the evidence (questions 4 and 5), and handle data (question 6). A band beneath says a person makes the hiring decision.</desc>
+  <rect width="800" height="300" fill="#ffffff"/>
+  <g font-family="system-ui, sans-serif" font-size="15" fill="#111111">
+    <g stroke="#111111" stroke-width="2" fill="#f4f4f5">
+      <rect x="20" y="40" width="170" height="130" rx="8"/>
+      <rect x="220" y="40" width="170" height="130" rx="8"/>
+      <rect x="420" y="40" width="170" height="130" rx="8"/>
+      <rect x="620" y="40" width="160" height="130" rx="8"/>
+    </g>
+    <g stroke="#111111" stroke-width="2" fill="none">
+      <path d="M192 105h26M392 105h26M592 105h26"/>
+    </g>
+    <g font-weight="600" text-anchor="middle">
+      <text x="105" y="80">1. Set up the role</text>
+      <text x="305" y="80">2. Run interviews</text>
+      <text x="505" y="80">3. Review evidence</text>
+      <text x="700" y="80">4. Handle data</text>
+    </g>
+    <g font-size="13" text-anchor="middle">
+      <text x="105" y="108">Q1 rubric</text>
+      <text x="105" y="130">Q7 pilot plan</text>
+      <text x="305" y="108">Q2 follow-ups</text>
+      <text x="305" y="130">Q3 candidate experience</text>
+      <text x="505" y="108">Q4 score evidence</text>
+      <text x="505" y="130">Q5 human review</text>
+      <text x="700" y="108">Q6 vendor questions</text>
+    </g>
+    <rect x="20" y="205" width="760" height="56" rx="8" fill="none" stroke="#111111" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="400" y="239" font-size="15" font-weight="600" text-anchor="middle">A person makes the hiring decision at every stage</text>
+  </g>
+</svg>
